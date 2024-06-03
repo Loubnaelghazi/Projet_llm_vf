@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { getUserData } from "../api/api";
 import moment from "moment";
 
@@ -8,14 +8,32 @@ export default function User() {
   const [loading, setLoading] = useState(["|", "/", "-", "\\"]);
   const [loadingIndex, setLoadingIndex] = useState(0);
   const { username } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    getUserData(username)
-      .then((res) => {
-        setUserData(res.data);
-      })
-      .catch((err) => console.log(err.message));
-  }, [username]);
+    const user = sessionStorage.getItem("user_token");
+    console.log(user);
+    if (!user || user === null) {
+      sessionStorage.removeItem("user_token");
+      navigate('/')
+    }
+    if (!location.pathname.includes(user)) {
+      navigate(`/home/profile/${user}`);
+      getUserData(user)
+        .then((res) => {
+          setUserData(res.data);
+        })
+        .catch((err) => console.log(err.message));
+    }
+    else {
+            getUserData(user)
+              .then((res) => {
+                setUserData(res.data);
+              })
+              .catch((err) => console.log(err.message));
+    }
+  },[]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -57,10 +75,9 @@ export default function User() {
         <div className="px-6">{"{"}</div>
         <div className="px-8">
           <div className="text-md">"username": "{userData.username}",</div>
-          <div className="text-md"
-          >"email": "{userData.email}",</div>
+          <div className="text-md">"email": "{userData.email}",</div>
           <div className="text-md">"gender": "{userData.gender}",</div>
-  
+
           <div>
             "joined": "
             {moment(userData.created).format("MMMM Do YYYY, h:mm:ss a")}"

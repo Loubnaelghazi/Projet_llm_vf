@@ -3,10 +3,22 @@ from fastapi import HTTPException, status, APIRouter
 from fastapi.responses import JSONResponse
 from db import SessionLocal
 from models import Question, QuestionRequest, Topic, User, UserLogin, UserLoginResponse, UserRegister, UserRegisterResponse,TopicCreate,UserModel
-
+from transformers import AutoModelForCausalLM, AutoTokenizer
+# import torch
+#from llm_model import model, tokenizer
 
 router = APIRouter()
 
+
+# @app.post("/generate")
+# async def generate_text(request: TextGenerationRequest):
+#     inputs = tokenizer.encode(request.prompt, return_tensors="pt")
+#     outputs = model.generate(inputs, max_length=request.max_length, num_return_sequences=1)
+#     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+#     return {"generated_text": generated_text}
+
+
+#################################################################
 
 def get_user(username: str):
     db = SessionLocal()

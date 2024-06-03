@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRef  } from 'react';
 import { login } from '../api/api';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
@@ -9,6 +10,7 @@ const [isError,setIsError]=useState(false)
 const [error,setError]=useState(null); 
 const email_ref=useRef();
 const password_ref=useRef(); 
+const navigate = useNavigate()
 
 async function handleLogin(e){
 e.preventDefault()  
@@ -18,15 +20,12 @@ const login_credentials={
   email :email_value,
   password: password_value 
 }
-
-
-
 try {
-    await login(login_credentials)
+    const res = await login(login_credentials)
     setIsError(false)
-
+    sessionStorage.setItem("user_token", res.data.username);
+    navigate('/home')
 } catch (error) {
-  console.log(error.response.data.detail)
   setIsError(true)
   setError(error.response.data.detail)
 }

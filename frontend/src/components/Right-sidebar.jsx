@@ -63,7 +63,9 @@ export default function RightSidebar() {
       </div>
 
       <div
-        onClick={() => navigate(`/`)}
+        onClick={() => {
+          sessionStorage.removeItem("user_token");
+          navigate(`/`)}}
         className="flex flex-row items-center gap-4 cursor-pointer my-5 p-4 bg-primary rounded-md hover:opacity-80 transition-opacity duration-200"
       >
         <MdLogout className="mt-1" />

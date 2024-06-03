@@ -34,9 +34,9 @@ class Question(Base):
 
 class UserRegister(BaseModel):
     username: str
+    email: str
     password: str
     confirmation: str
-    email: str
 
 class UserLogin(BaseModel):
     email: str
@@ -62,3 +62,6 @@ class UserModel(BaseModel):
     username:str
     email:str
     
+class TextGenerationRequest(BaseModel):
+    prompt: str
+    max_length: int = 256    
