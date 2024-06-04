@@ -2,23 +2,12 @@ from typing import List
 from fastapi import HTTPException, status, APIRouter
 from fastapi.responses import JSONResponse
 from db import SessionLocal
-from models import Question, QuestionRequest, Topic, User, UserLogin, UserLoginResponse, UserRegister, UserRegisterResponse,TopicCreate,UserModel
+from models import Question, QuestionRequest, Topic, User, UserLogin, UserLoginResponse, UserRegister, UserRegisterResponse,TopicCreate,UserModel,TextGenerationResponse,TextGenerationRequest
 from transformers import AutoModelForCausalLM, AutoTokenizer
-# import torch
-#from llm_model import model, tokenizer
+import torch
+from llm_model import model, tokenizer
 
 router = APIRouter()
-
-
-# @app.post("/generate")
-# async def generate_text(request: TextGenerationRequest):
-#     inputs = tokenizer.encode(request.prompt, return_tensors="pt")
-#     outputs = model.generate(inputs, max_length=request.max_length, num_return_sequences=1)
-#     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-#     return {"generated_text": generated_text}
-
-
-#################################################################
 
 def get_user(username: str):
     db = SessionLocal()
@@ -27,6 +16,31 @@ def get_user(username: str):
         return user
     else:
         raise HTTPException(status_code=404, detail=f"user with this username {username} is not found!")
+
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+
+@router.post("/api/v1/generate",response_model=TextGenerationResponse)
+async def generate_text(request: TextGenerationRequest):
+    prompt_template = f"""
+    You are an AI Agent specialized to answer questions about FSTT (faculty of science and technology in Tanger).
+    Explain the concept or answer the question about FSTT.
+    In order to create the answer, please only use the information from the Reponse and Contexte.
+    Answer with simple words.
+    If needed, include also explanations.
+    It's important to answer in French.
+    Question: {request.prompt}
+    Answer:
+    """
+    inputs = tokenizer.encode(prompt_template, return_tensors="pt",padding=True)
+    
+    outputs = model.generate(inputs, max_length=500, num_return_sequences=1,pad_token_id=tokenizer.eos_token_id)
+    generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return {"generated_text": generated_text}
+
+
+#################################################################
+
     
 @router.get("/api/v1/auth/{username}",response_model=UserModel)  
 def get_username(username:str):

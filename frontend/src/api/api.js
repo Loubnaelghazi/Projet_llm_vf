@@ -15,3 +15,8 @@ export const getUserData= async (username)=>{
 export const register = async (credentials) => {
   return api.post("/api/v1/auth/register", credentials);
 };
+
+export const chatResponse= async (response)=>{
+  return api.post("/api/v1/generate",response)
+};
+

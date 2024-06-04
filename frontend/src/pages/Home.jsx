@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div className="flex h-screen">
-      <Sidebar className="w-auto bg-base-200 p-4 shadow h-full fixed left-0 top-0 bottom-0" />
+      <Sidebar className="w-auto bg-accent p-4 shadow h-full fixed left-0 top-0 bottom-0" />
       <div className="flex flex-col flex-1">
         <header className="bg-primary shadow relative flex items-center justify-center">
           <div className="flex gap-2 items-center ">

@@ -44,12 +44,12 @@ export default function User() {
   }, [loading]);
 
   return (
-    <div className="w-full flex flex-col text-xl bg-base-300 gap-3 p-10">
-      <div className="text-primary font-semibold my-5 py-1">
+    <div className="w-full flex flex-col text-xl bg-accent gap-3 p-10">
+      <div className="text-base-100 font-semibold my-5 py-1">
         Here is a better way to display your data using{" "}
         <span className="p-2 bg-secondary text-primary">JSON</span>
       </div>
-      <div className="text-primary font-semibold py-1">
+      <div className="text-base-100 font-semibold py-1">
         We encourage our users to familiarize with{" "}
         <span className="p-2 bg-secondary text-primary">Terminal</span> usage!
       </div>

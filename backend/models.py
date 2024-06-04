@@ -64,4 +64,7 @@ class UserModel(BaseModel):
     
 class TextGenerationRequest(BaseModel):
     prompt: str
-    max_length: int = 256    
+    
+
+class TextGenerationResponse(BaseModel):
+    generated_text: str      
