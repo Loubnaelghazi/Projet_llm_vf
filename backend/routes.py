@@ -6,6 +6,7 @@ from models import Question, QuestionRequest, Topic, User, UserLogin, UserLoginR
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from llm_model import model, tokenizer
+from RAG import AIAgent, RAGSystem
 
 router = APIRouter()
 
@@ -38,10 +39,16 @@ async def generate_text(request: TextGenerationRequest):
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return {"generated_text": generated_text}
 
+ai_agent = AIAgent()
 
-#################################################################
+rag_system = RAGSystem(ai_agent=ai_agent, collection=collection, num_retrieved_docs=150)
 
-    
+@router.post("/api/v1/auth/generate_rag", response_model=TextGenerationResponse)
+async def query(request: TextGenerationRequest):
+    response = rag_system.query(request.prompt)
+    return TextGenerationResponse(generated_text=response)
+
+#################################################################   
 @router.get("/api/v1/auth/{username}",response_model=UserModel)  
 def get_username(username:str):
     db=SessionLocal()
@@ -50,8 +57,6 @@ def get_username(username:str):
         return UserModel(username=user.username,email=user.email)
     finally:
         db.close()
-
-
 
 @router.post("/api/v1/auth/register", response_model=UserRegisterResponse)
 def create_user(user: UserRegister):

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { FaUserCircle, FaRobot } from "react-icons/fa";
 import startChat from "../assets/startchat.png";
-import { chatResponse } from "../api/api";
+import { chatResponse,chatResponseRag } from "../api/api";
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);

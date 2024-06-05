@@ -20,3 +20,6 @@ export const chatResponse= async (response)=>{
   return api.post("/api/v1/generate",response)
 };
 
+export const chatResponseRag= async(response)=>{
+  return api.post("/api/v1/generate_rag",response)
+};
