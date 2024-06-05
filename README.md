@@ -8,10 +8,10 @@
   - [6-Used models](#used-models)
   - [7-Realization](#realization)
   - [8-Conclusion](#conclusion)
-  - [9-Acknowledgements](#acknowledgements)   <-- Ajout de la section Acknowledgements ici
-  - [10-Collaborateurs](#collaborateurs)
-  - [11-Références](#références)
-    
+  - [9-Collaborateurs](#collaborateurs)
+  - [10-Acknowledgements](#acknowledgements)   
+  - [11-Collaborateurs](#collaborateurs)
+
 ## Introduction
 #### The development of a chatbot fine-tuned on a custom context based on French language models, particularly focusing on the Faculty of Sciences and Technology of Tangier (FSTT), represents a significant advancement in the application of artificial intelligence in educational contexts. This project, leveraging the capabilities of Retrieval Augmented Generation (RAG), LangChain, and Vector Databases, aims to create a smart chatbot capable of providing accurate and contextually relevant information to users. The chatbot will be fine-tuned using a specialized French corpus that includes materials from FSTT courses and related activities, ensuring it is tailored to the specific needs and terminology of the institution.
 
@@ -75,3 +75,17 @@
 
 ![12](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/d2f7bec5-dfd7-4c6f-b2a4-86b3b1573d1d)
 
+## Conclusion
+#### In conclusion, the development of a chatbot fine-tuned on a custom context based on French language models (LLMs) for the case study of FSTT presents a comprehensive and innovative endeavor. By leveraging technologies such as Retrieval Augmented Generation (RAG), LangChain, and Vector Databases, coupled with a meticulous methodology, this project aims to address the specific needs of the academic community within FST de Tanger.
+
+#### Through thorough data collection, methodical implementation, and thoughtful backend development using frameworks like FastAPI or Flask, the project ensures both performance and scalability. The integration of DevOps tools further guarantees continuous improvement and deployment efficiency.
+
+#### By addressing accessibility concerns and aligning UI design with cultural preferences, the project not only enhances user engagement but also demonstrates a commitment to inclusivity and user-centricity. Overall, this project represents a significant step towards advancing chatbot technology within academic settings, with potential implications beyond the FSTT community.
+## Collaborators
+ME,
+#### Essetti Widad
+#### Elaoufi Imane
+#### Zaoui Hanane
+
+## Acknowledgements
+Special thanks to Sir Lotfi Lachak for his invaluable guidance and support throughout the development of this project.
