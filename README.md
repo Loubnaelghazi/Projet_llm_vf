@@ -10,7 +10,7 @@
   - [8-Conclusion](#conclusion)
   - [9-Collaborateurs](#collaborateurs)
   - [10-Acknowledgements](#acknowledgements)   
-  - [11-Collaborateurs](#collaborateurs)
+  - [11-Collaborators](#collaborators)
 
 ## Introduction
 #### The development of a chatbot fine-tuned on a custom context based on French language models, particularly focusing on the Faculty of Sciences and Technology of Tangier (FSTT), represents a significant advancement in the application of artificial intelligence in educational contexts. This project, leveraging the capabilities of Retrieval Augmented Generation (RAG), LangChain, and Vector Databases, aims to create a smart chatbot capable of providing accurate and contextually relevant information to users. The chatbot will be fine-tuned using a specialized French corpus that includes materials from FSTT courses and related activities, ensuring it is tailored to the specific needs and terminology of the institution.
@@ -65,7 +65,7 @@
 
 
 #### React is a declarative, component-based, open-source front-end JavaScript library for building user interfaces. Whew! There's a lot to unpack there, so let's go through each piece of that definition.
-# Used models
+## Used models
 ## gemma-2b-it
 #### The Gemma-2b-it Language Model is part of the Gemma family of lightweight, state-of-the-art open models developed by Google DeepMind and other teams across Google. Inspired by the Gemini models, Gemma models aim to provide best-in-class performance while adhering to rigorous standards for safety and responsible AI development.
 #### Gemma-2b-it is an instruct version of the Gemma model and it is one of the two sizes of Gemma models released, along with Gemma-7b. Both sizes come with pre-trained and instruction-tuned variants, offering state-of-the-art performance relative to their sizes. The Gemma models share technical and infrastructure components with Gemini, enabling them to achieve high performance directly on developer laptops or desktop computers.
