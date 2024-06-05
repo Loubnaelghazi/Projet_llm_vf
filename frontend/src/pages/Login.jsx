@@ -35,7 +35,7 @@ try {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-transparent via-sky-900 to-transparent">
+    <div className="min-h-screen flex items-center justify-center ">
       <div className="w-full max-w-sm p-8 space-y-6 bg-base-100 rounded-lg shadow-xl transform hover:scale-105 transition duration-300">
         <h1 className="text-3xl font-bold text-center text-primary">Login</h1>
         <p className=" text-sm font-medium ">

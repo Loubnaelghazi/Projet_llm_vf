@@ -12,8 +12,11 @@ from langchain.document_loaders import CSVLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import pandas as pd
 
+import chromadb.utils.embedding_functions as embedding_functions
+huggingface_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+model_name="multi-qa-mpnet-base-dot-v1")
 
-os.environ['HUGGINGFACE_HUB_TOKEN'] = "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"
+os.environ['HUGGINGFACE_HUB_TOKEN'] = "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"
 
 
 class AIAgent:
@@ -24,8 +27,8 @@ class AIAgent:
     def __init__(self, model_name="google/gemma-2b-it", max_length=1000):
         self.max_length = max_length
         try:
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name, token="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")
-            self.gemma_llm = AutoModelForCausalLM.from_pretrained(model_name, token="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")
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name, token="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")
+            self.gemma_llm = AutoModelForCausalLM.from_pretrained(model_name, token="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")
         except Exception as e:
             raise ValueError(f"Error loading model: {e}")
 
@@ -107,11 +110,17 @@ huggingface_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
 )
 
 # Configure the ChromaDB client with persistence
-persist_directory = "C:\\Users\\LOUBNA\\Desktop\\project_llm\\backend\\chroma_db_single_pdf_final123"
-client = chromadb.PersistentClient(path=persist_directory)
-collection = client.get_collection(name="text_embeddings", embedding_function=huggingface_ef)
+persist_directory = "C:\\Users\\LOUBNA\\Desktop\\project_llm\\backend\\chroma_db_single_pdf_final"
+client2 = chromadb.PersistentClient(path=persist_directory)
 
-# Initialize the AI Agent
-ai_agent = AIAgent()
+# Ensure collection exists
+collections = client2.list_collections()
+print(f"Available collections: {collections}")
+
+collection = client2.get_collection(name="text_embeddings", embedding_function=huggingface_ef)
+
+# Initialize the RAGSystem with the existing collection
+ai_agent=AIAgent()
+rag_system = RAGSystem(ai_agent=ai_agent, collection=collection, num_retrieved_docs=150)
 
 

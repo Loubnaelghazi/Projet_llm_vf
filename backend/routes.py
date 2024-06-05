@@ -48,6 +48,8 @@ async def query(request: TextGenerationRequest):
     response = rag_system.query(request.prompt)
     return TextGenerationResponse(generated_text=response)
 
+
+
 #################################################################   
 @router.get("/api/v1/auth/{username}",response_model=UserModel)  
 def get_username(username:str):
