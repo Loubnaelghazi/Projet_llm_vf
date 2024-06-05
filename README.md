@@ -1,16 +1,21 @@
 # Developing a chatbot fine-tuned on a custom context based on French language models (LLMs): case of study FSTT.
 # Table of content 
-  ## 1-Introduction
-  ## 2-Objective
-  ## 3-Conception
-  ## 4-Architecture
-  ## 5-Used technologies
-  ## 6-Used models
-  ## 7-Realization 
-  ## 8-Conclusion
-# Introduction
+  - [1-Introduction](#introduction)
+  - [2-Objective](#objective)
+  - [3-Conception](#conception)
+  - [4-Architecture](#architecture)
+  - [5-Used technologies](#used-technologies)
+  - [6-Used models](#used-models)
+  - [7-Realization](#realization)
+  - [8-Conclusion](#conclusion)
+  - [9-Acknowledgements](#acknowledgements)   <-- Ajout de la section Acknowledgements ici
+  - [10-Collaborateurs](#collaborateurs)
+  - [11-Références](#références)
+    
+## Introduction
 #### The development of a chatbot fine-tuned on a custom context based on French language models, particularly focusing on the Faculty of Sciences and Technology of Tangier (FSTT), represents a significant advancement in the application of artificial intelligence in educational contexts. This project, leveraging the capabilities of Retrieval Augmented Generation (RAG), LangChain, and Vector Databases, aims to create a smart chatbot capable of providing accurate and contextually relevant information to users. The chatbot will be fine-tuned using a specialized French corpus that includes materials from FSTT courses and related activities, ensuring it is tailored to the specific needs and terminology of the institution.
-# Objective
+
+## Objective
 #### The primary objective of this project is to establish a comprehensive and efficient chatbot that serves the FSTT community. The chatbot will assist students, faculty, and other stakeholders by providing easy access to information about courses, activities, and other relevant details. To achieve this, the project will focus on:
 
 #### Data Collection: Scraping and compiling data related to FSTT, including course information, academic schedules, and extracurricular activities.
@@ -20,7 +25,7 @@
 #### Language Model Training: Fine-tuning language models specifically for the French language, taking into account linguistic and cultural nuances.
 #### User Interface (UI) Design: Developing an intuitive and accessible UI that aligns with the preferences of the target audience, ensuring a seamless interaction with the chatbot.
 #### By addressing these areas, the project aims to create a chatbot that not only meets the current needs of the FSTT community but also sets a benchmark for future developments in French language AI applications in educational settings.
-# Conception
+## Conception
 ## Use Case
 ![use case](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/9494cd63-6b12-4d76-8535-9e67d43bf62d)
 
@@ -31,7 +36,7 @@
 
 #### The class diagram for the project illustrates the various components and their interactions. The DataCollection class is responsible for scraping, storing, and processing data related to FSTT. The Methodology class utilizes this data to implement various techniques like Retrieval Augmented Generation (RAG), LangChain, and vector databases, while also fine-tuning and validating these methods. BackendDevelopment supports the methodology by choosing appropriate frameworks, implementing DevOps tools, and monitoring performance. SinglePageApplication (SPA) is enabled by BackendDevelopment and involves choosing an architecture, analyzing benefits, and handling associated challenges. The LanguageModelTraining class fine-tunes and evaluates language models using the data and methods defined in Methodology. Finally, the UserInterfaceDesign class focuses on designing an accessible user interface and conducting user testing to refine the design. The diagram also highlights the relationships between these components, showing how data flows and methodologies support various aspects of the project, integrating different functionalities to create a cohesive system.
 
-# Architecture
+## Architecture
 ## Fine tuning
 ![fine tuning](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/ecf46bda-1605-4a3b-8e3c-9e2a287f215d)
 
@@ -41,7 +46,7 @@
 
 
 
-# Used technologies
+## Used technologies
 ## Chromadb
 ![chroma](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/a196ea60-ae02-47ad-a682-bc94a2ba9f4d)
 
@@ -65,7 +70,7 @@
 #### The Gemma-2b-it Language Model is part of the Gemma family of lightweight, state-of-the-art open models developed by Google DeepMind and other teams across Google. Inspired by the Gemini models, Gemma models aim to provide best-in-class performance while adhering to rigorous standards for safety and responsible AI development.
 #### Gemma-2b-it is an instruct version of the Gemma model and it is one of the two sizes of Gemma models released, along with Gemma-7b. Both sizes come with pre-trained and instruction-tuned variants, offering state-of-the-art performance relative to their sizes. The Gemma models share technical and infrastructure components with Gemini, enabling them to achieve high performance directly on developer laptops or desktop computers.
 
-# Realization
+## Realization
 ![interface1](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/d59b6a5b-d9b0-4e93-b4b0-254a592e9519)
 
 ![12](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/d2f7bec5-dfd7-4c6f-b2a4-86b3b1573d1d)
