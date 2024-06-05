@@ -33,7 +33,8 @@
 
 # Architecture
 ## Fine tuning
-![finetuning](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/6e451da4-2391-46e5-9be2-76c9af857801)
+![fine tuning](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/ecf46bda-1605-4a3b-8e3c-9e2a287f215d)
+
 
 ## RAG
 ![rag](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/7056fdb1-f2d2-4968-81d9-7b9cdae88b43)
@@ -41,7 +42,8 @@
 
 # Used technologies
 ## Chromadb
-![chroma](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/02acea78-da5d-492a-9da6-7dc4bf0db4a4)
+![chroma](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/a196ea60-ae02-47ad-a682-bc94a2ba9f4d)
+
 
 
 #### Chroma DB is a vector store that is open-source and is utilized for the retrieval of vector embeddings. We will create a vectors store, add collections, add text to the collection, and perform a query search with and without meta filtering.
