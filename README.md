@@ -37,7 +37,8 @@
 
 
 ## RAG
-![rag](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/7056fdb1-f2d2-4968-81d9-7b9cdae88b43)
+![rag](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/6b58a4dd-f15f-4b80-8814-cb95db80514e)
+
 
 
 # Used technologies
