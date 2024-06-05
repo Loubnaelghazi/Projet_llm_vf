@@ -22,7 +22,8 @@
 #### By addressing these areas, the project aims to create a chatbot that not only meets the current needs of the FSTT community but also sets a benchmark for future developments in French language AI applications in educational settings.
 # Conception
 ## Use Case
-![Usecase](https://github.com/WidadEs/llm/assets/118807169/2c8dbff5-c49a-4daf-bbd8-0c0a5fa35dba)
+![use case](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/9494cd63-6b12-4d76-8535-9e67d43bf62d)
+
 #### The use-case diagram illustrates the interactions between two primary actors, the User and the Admin, with the system. The User engages with the chatbot to perform actions such as using the chatbot, requesting information, receiving provided information, and viewing data. The Admin is responsible for managing the data, which includes tasks like scraping data from relevant sources and storing it appropriately. The diagram highlights the flow of actions and responsibilities, showing how the User interacts with the chatbot for information retrieval while the Admin ensures data management and system functionality. This helps in understanding the roles and use cases involved in maintaining and utilizing the chatbot system.
 
 ## Class diagram
