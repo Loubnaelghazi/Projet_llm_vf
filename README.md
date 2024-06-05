@@ -74,6 +74,8 @@
 ![interface1](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/d59b6a5b-d9b0-4e93-b4b0-254a592e9519)
 
 ![12](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/d2f7bec5-dfd7-4c6f-b2a4-86b3b1573d1d)
+![Sans titre](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/b483a736-50cf-46a4-b743-04b4f5c5a347)
+
 
 ## Conclusion
 #### In conclusion, the development of a chatbot fine-tuned on a custom context based on French language models (LLMs) for the case study of FSTT presents a comprehensive and innovative endeavor. By leveraging technologies such as Retrieval Augmented Generation (RAG), LangChain, and Vector Databases, coupled with a meticulous methodology, this project aims to address the specific needs of the academic community within FST de Tanger.
