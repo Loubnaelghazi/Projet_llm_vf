@@ -78,6 +78,8 @@
 ![Sans titre](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/689250f5-54df-4c33-8294-332eefdfbab6)
 The interface of our chatbot befor starting the chat providing 2 sidebbars(the rght one can be collapsed contains the chatbot page, the user page which provide him its informations ).
 ![image](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/d619d959-aa69-4922-882d-02eb9f071874)
+![Screenshot (380)](https://github.com/user-attachments/assets/84163698-20c8-45d4-bf70-826d9881f586)
+
 The user can choose which model can use (RAG OR FINE TUNNED) to start chating with..
 ![Sans titre](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/887ea423-151c-4479-9077-541bc52b6317)
 
