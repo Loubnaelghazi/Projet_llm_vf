@@ -20,8 +20,8 @@
 
 #### Data Collection: Scraping and compiling data related to FSTT, including course information, academic schedules, and extracurricular activities.
 #### Methodology: Implementing a step-by-step approach to develop the chatbot using RAG, LangChain, and Vector Databases. This includes referencing original research studies and papers to support the choice of these technologies.
-#### Backend Development: Choosing an appropriate backend framework, such as FastAPI or Flask, based on performance and scalability requirements. Integrating DevOps tools for continuous integration and deployment.
-#### Single Page Application (SPA): Opting for an SPA architecture to ensure a smooth and responsive user experience. Discussing the benefits and challenges of this approach.
+#### Backend Development: Choosing an appropriate backend framework (FastAPI) based on performance and scalability requirements. 
+#### Single Page Application (SPA):  Opting for an SPA architecture using React to ensure a smooth and responsive user experience. Discussing the benefits and challenges of this approach.
 #### Language Model Training: Fine-tuning language models specifically for the French language, taking into account linguistic and cultural nuances.
 #### User Interface (UI) Design: Developing an intuitive and accessible UI that aligns with the preferences of the target audience, ensuring a seamless interaction with the chatbot.
 #### By addressing these areas, the project aims to create a chatbot that not only meets the current needs of the FSTT community but also sets a benchmark for future developments in French language AI applications in educational settings.
