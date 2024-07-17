@@ -81,7 +81,7 @@ The interface of our chatbot befor starting the chat providing 2 sidebbars(the r
 ![Screenshot (380)](https://github.com/user-attachments/assets/84163698-20c8-45d4-bf70-826d9881f586)
 
 The user can choose which model can use (RAG OR FINE TUNNED) to start chating with..
-![Sans titre](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/887ea423-151c-4479-9077-541bc52b6317)
+
 
 ![Sans titre](https://github.com/Loubnaelghazi/Projet_llm_vf/assets/114692135/ba1b57e9-ed8d-457a-aa52-1c562cb767c5)
 
